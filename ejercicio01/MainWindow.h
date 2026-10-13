@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QListWidgetItem>
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -16,6 +17,9 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
+
+public slots:
+    void mostrarColor(QListWidgetItem *item);
 
 private:
     Ui::MainWindow *ui;
